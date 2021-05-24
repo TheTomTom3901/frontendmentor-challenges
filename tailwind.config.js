@@ -1,4 +1,4 @@
-const mergedTheme = [].reduce((accTheme, currentTheme) => {
+const mergedTheme = [require('./challenges/column-preview-card/theme')].reduce((accTheme, currentTheme) => {
   return Object.entries(currentTheme).reduce((acc, [key, value]) => {
     acc[key] = { ...acc[key], ...value};
     return acc;
