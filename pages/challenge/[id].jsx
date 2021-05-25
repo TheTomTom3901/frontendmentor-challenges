@@ -1,8 +1,10 @@
 import { getAllChallengeIds, getChallenge } from '../../lib/challenges'
 import ColumnPreviewCard from '../../components/challenges/ColumnPreviewCard'
+import StatsPreviewCard from '../../components/challenges/StatsPreviewCard';
 
 const componentMap = {
-  'column-preview-card': ColumnPreviewCard
+  'column-preview-card': ColumnPreviewCard,
+  'stats-preview-card': StatsPreviewCard
 }
 
 const Challenge = ({ challenge }) => {
