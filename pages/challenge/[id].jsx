@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { getAllChallengeIds, getChallenge } from '../../lib/challenges'
 import ColumnPreviewCard from '../../components/challenges/ColumnPreviewCard'
 import StatsPreviewCard from '../../components/challenges/StatsPreviewCard'
@@ -9,10 +10,19 @@ const componentMap = {
   'four-card-feature-section': FourCardFeatureSection
 }
 
-const Challenge = ({ challenge }) => {
-  const Component = componentMap[challenge.id]
+const Challenge = ({ challenge: { id, title, link, fontUrl } }) => {
+  const Component = componentMap[id]
 
-  return <Component challenge={challenge} />
+  return (
+    <>
+      <Head>
+        <title>Frontend Mentor | {title}</title>
+        {/*Mirrors NextJS font optimization but loads correctly when navigating with <Link>*/}
+        <style data-href={fontUrl}>{`@import url('${fontUrl}')`}</style>
+      </Head>
+      <Component id={id} link={link}/>
+    </>
+  )
 }
 
 export const getStaticPaths = async () => ({ paths: getAllChallengeIds(), fallback: false })
