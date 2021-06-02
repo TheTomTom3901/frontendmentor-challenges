@@ -1,3 +1,5 @@
+import Attribute from '../Attribute'
+
 const Stat = ({ value, label }) => (
   <div className="space-y-1 xl:space-y-2">
     <p className="font-bold text-white font-lexend-deca text-2xl tracking-wider">{value}</p>
@@ -29,9 +31,7 @@ const StatsPreviewCard = ({ id, link }) => (
         </div>
       </div>
     </div>
-    <span className="text-white mt-8">
-      Challenge from <a className="hover:underline" href={link} target="_blank" rel="noreferrer">Frontend Mentor</a>
-    </span>
+    <Attribute className="text-white mt-8" link={link} />
   </div>
 )
 

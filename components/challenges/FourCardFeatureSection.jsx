@@ -1,3 +1,5 @@
+import Attribute from '../Attribute'
+
 const Card = ({ bannerColour, title, subtitle, icon }) => (
   <div className="bg-white shadow-xl overflow-hidden rounded-lg flex-1">
     <div className={`${bannerColour} h-1`} />
@@ -52,9 +54,7 @@ const FourCardFeatureSection = ({ id, link }) => (
         />
       </div>
     </div>
-    <span className="mt-14">
-      Challenge from <a className="hover:underline" href={link} target="_blank" rel="noreferrer">Frontend Mentor</a>
-    </span>
+    <Attribute className="mt-14" link={link} />
   </div>
 )
 

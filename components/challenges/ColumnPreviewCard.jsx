@@ -1,3 +1,5 @@
+import Attribute from '../Attribute'
+
 const Card = ({ bgColour, textColour, icon, title, description }) => (
   <div className={`${bgColour} p-12`}>
     <img src={icon} alt={`${title}-icon`} className="mb-10" />
@@ -32,9 +34,7 @@ const ColumnPreviewCard = ({ id, link }) => (
         description="Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style."
       />
     </div>
-    <span className="mt-8">
-      Challenge from <a className="hover:underline" href={link} target="_blank" rel="noreferrer">Frontend Mentor</a>
-    </span>
+    <Attribute className="mt-8" link={link} />
   </div>
 )
 
