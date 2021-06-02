@@ -3,11 +3,13 @@ import { getAllChallengeIds, getChallenge } from '../../lib/challenges'
 import ColumnPreviewCard from '../../components/challenges/ColumnPreviewCard'
 import StatsPreviewCard from '../../components/challenges/StatsPreviewCard'
 import FourCardFeatureSection from '../../components/challenges/FourCardFeatureSection'
+import SinglePriceGrid from '../../components/challenges/SinglePriceGrid'
 
 const componentMap = {
   'column-preview-card': ColumnPreviewCard,
   'stats-preview-card': StatsPreviewCard,
-  'four-card-feature-section': FourCardFeatureSection
+  'four-card-feature-section': FourCardFeatureSection,
+  'single-price-grid': SinglePriceGrid
 }
 
 const Challenge = ({ challenge: { id, title, link, fontUrl } }) => {
