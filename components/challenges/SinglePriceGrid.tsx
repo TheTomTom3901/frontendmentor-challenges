@@ -1,6 +1,7 @@
 import Attribute from '../Attribute'
+import Props from './types'
 
-const SinglePriceGrid = ({ link }) => (
+const SinglePriceGrid = ({ link }: Props) => (
   <div className="flex flex-col items-center justify-center bg-spg-light-gray px-8 py-20 xl:h-screen xl:p-0">
     <div className="font-karla rounded-md overflow-hidden shadow-xl xl:max-w-2xl xl:shadow-2xl">
       <div className="bg-white p-6 xl:p-10">

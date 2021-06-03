@@ -1,4 +1,5 @@
 import Attribute from '../Attribute'
+import Props from './types'
 
 const Stat = ({ value, label }) => (
   <div className="space-y-1 xl:space-y-2">
@@ -7,7 +8,7 @@ const Stat = ({ value, label }) => (
   </div>
 )
 
-const StatsPreviewCard = ({ id, link }) => (
+const StatsPreviewCard = ({ id, link }: Props) => (
   <div className="flex flex-col justify-center items-center bg-spc-very-dark-blue px-6 py-20 xl:h-screen xl:p-0">
     <div className="rounded-lg overflow-hidden font-inter bg-spc-dark-desaturated-blue xl:flex xl:flex-row-reverse xl:w-9/12">
       <div className="relative">

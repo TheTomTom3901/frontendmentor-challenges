@@ -1,4 +1,5 @@
 import Attribute from '../Attribute'
+import Props from './types'
 
 const Card = ({ bannerColour, title, subtitle, icon }) => (
   <div className="bg-white shadow-xl overflow-hidden rounded-lg flex-1">
@@ -15,7 +16,7 @@ const Card = ({ bannerColour, title, subtitle, icon }) => (
   </div>
 )
 
-const FourCardFeatureSection = ({ id, link }) => (
+const FourCardFeatureSection = ({ id, link }: Props) => (
   <div className="flex flex-col items-center px-8 py-24 bg-fcfs-very-light-gray xl:px-0 xl:py-30">
     <div className="flex flex-col items-center font-poppins">
       <div className="mb-16 text-center xl:w-2/5">

@@ -1,7 +1,11 @@
 import Link from 'next/link'
-import { getChallenges } from '../lib/challenges'
+import { getChallenges, Challenge } from '../lib/challenges'
 
-const Home = ({ challenges }) => (
+type Props = {
+  challenges: Challenge[]
+}
+
+const Home = ({ challenges }: Props) => (
   <ul>
     {challenges.map(({ id, title }) => (
       <li key={id}>

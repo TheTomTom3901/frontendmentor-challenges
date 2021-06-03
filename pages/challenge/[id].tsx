@@ -1,9 +1,13 @@
 import Head from 'next/head'
-import { getAllChallengeIds, getChallenge } from '../../lib/challenges'
+import { getAllChallengePaths, getChallenge, Challenge as ChallengeModel } from '../../lib/challenges'
 import ColumnPreviewCard from '../../components/challenges/ColumnPreviewCard'
 import StatsPreviewCard from '../../components/challenges/StatsPreviewCard'
 import FourCardFeatureSection from '../../components/challenges/FourCardFeatureSection'
 import SinglePriceGrid from '../../components/challenges/SinglePriceGrid'
+
+type Props = {
+  challenge: ChallengeModel
+}
 
 const componentMap = {
   'column-preview-card': ColumnPreviewCard,
@@ -12,7 +16,7 @@ const componentMap = {
   'single-price-grid': SinglePriceGrid
 }
 
-const Challenge = ({ challenge: { id, title, link, fontUrl } }) => {
+const Challenge = ({ challenge: { id, title, link, fontUrl } }: Props) => {
   const Component = componentMap[id]
 
   return (
@@ -22,12 +26,12 @@ const Challenge = ({ challenge: { id, title, link, fontUrl } }) => {
         {/*Mirrors NextJS font optimization but loads correctly when navigating with <Link>*/}
         <style data-href={fontUrl}>{`@import url('${fontUrl}')`}</style>
       </Head>
-      <Component id={id} link={link}/>
+      <Component id={id} link={link} />
     </>
   )
 }
 
-export const getStaticPaths = async () => ({ paths: getAllChallengeIds(), fallback: false })
+export const getStaticPaths = async () => ({ paths: getAllChallengePaths(), fallback: false })
 
 export const getStaticProps = async ({ params }) => ({ props: { challenge: getChallenge(params.id) } })
 

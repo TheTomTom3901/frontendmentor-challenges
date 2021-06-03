@@ -1,4 +1,5 @@
 import Attribute from '../Attribute'
+import Props from './types'
 
 const Card = ({ bgColour, textColour, icon, title, description }) => (
   <div className={`${bgColour} p-12`}>
@@ -9,7 +10,7 @@ const Card = ({ bgColour, textColour, icon, title, description }) => (
   </div>
 )
 
-const ColumnPreviewCard = ({ id, link }) => (
+const ColumnPreviewCard = ({ id, link }: Props) => (
   <div className="flex flex-col justify-center items-center px-6 py-16 bg-cpc-very-light-gray xl:h-screen xl:p-0">
     <div className="rounded-lg overflow-hidden xl:flex xl:w-2/3">
       <Card
