@@ -1,0 +1,11 @@
+.background {
+  background-image: url("../../public/social-proof-section/bg-pattern-top-mobile.svg"), url("../../public/social-proof-section/bg-pattern-bottom-mobile.svg");
+  background-position: left top, right bottom;
+  @apply bg-no-repeat;
+}
+
+@screen xl {
+  .background {
+    background-image: url("../../public/social-proof-section/bg-pattern-top-desktop.svg"), url("../../public/social-proof-section/bg-pattern-bottom-desktop.svg");
+  }
+}
