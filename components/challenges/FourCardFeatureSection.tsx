@@ -1,5 +1,6 @@
 import Attribute from '../Attribute'
 import Props from './types'
+import addAssetPrefix from '../../utils/addAssetPrefix'
 
 const Card = ({ bannerColour, title, subtitle, icon }) => (
   <div className="bg-white shadow-xl overflow-hidden rounded-lg flex-1">
@@ -10,7 +11,7 @@ const Card = ({ bannerColour, title, subtitle, icon }) => (
         <p className="text-sm text-fcfs-grayish-blue">{subtitle}</p>
       </div>
       <div className="flex justify-end">
-        <img className="w-14 xl:w-auto" src={icon} alt={`${title}-icon`} />
+        <img className="w-14 xl:w-auto" src={addAssetPrefix(icon)} alt={`${title}-icon`} />
       </div>
     </div>
   </div>
@@ -31,27 +32,27 @@ const FourCardFeatureSection = ({ id, link }: Props) => (
           bannerColour="bg-fcfs-cyan"
           title="Supervisor"
           subtitle="Monitors activity to identify project roadblocks"
-          icon={`/${id}/icon-supervisor.svg`}
+          icon={`${id}/icon-supervisor.svg`}
         />
         <div className="space-y-6 flex-1 xl:space-y-8">
           <Card
             bannerColour="bg-fcfs-red"
             title="Team Builder"
             subtitle="Scans our talent network to create the optimal team for your project"
-            icon={`/${id}/icon-team-builder.svg`}
+            icon={`${id}/icon-team-builder.svg`}
           />
           <Card
             bannerColour="bg-fcfs-orange"
             title="Karma"
             subtitle="Regularly evaluates our talent to ensure quality"
-            icon={`/${id}/icon-karma.svg`}
+            icon={`${id}/icon-karma.svg`}
           />
         </div>
         <Card
           bannerColour="bg-fcfs-blue"
           title="Calculator"
           subtitle="Uses data from past projects to provide better delivery estimates"
-          icon={`/${id}/icon-calculator.svg`}
+          icon={`${id}/icon-calculator.svg`}
         />
       </div>
     </div>

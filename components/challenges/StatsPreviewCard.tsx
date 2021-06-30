@@ -1,5 +1,6 @@
 import Attribute from '../Attribute'
 import Props from './types'
+import addAssetPrefix from '../../utils/addAssetPrefix'
 
 const Stat = ({ value, label }) => (
   <div className="space-y-1 xl:space-y-2">
@@ -12,8 +13,8 @@ const StatsPreviewCard = ({ id, link }: Props) => (
   <div className="flex flex-col justify-center items-center bg-spc-very-dark-blue px-6 py-20 xl:h-screen xl:p-0">
     <div className="rounded-lg overflow-hidden font-inter bg-spc-dark-desaturated-blue xl:flex xl:flex-row-reverse xl:w-9/12">
       <div className="relative">
-        <img className="xl:hidden" src={`/${id}/mobile-header.jpg`} alt="mobile header" />
-        <img className="hidden xl:block" src={`/${id}/desktop-header.jpg`} alt="desktop header" />
+        <img className="xl:hidden" src={addAssetPrefix(`${id}/mobile-header.jpg`)} alt="mobile header" />
+        <img className="hidden xl:block" src={addAssetPrefix(`${id}/desktop-header.jpg`)} alt="desktop header" />
         <div className="absolute bg-spc-soft-violet mix-blend-multiply inset-0" />
       </div>
       <div className="flex flex-col flex-1 justify-between p-8 pt-10 text-center xl:p-16 xl:text-left">
