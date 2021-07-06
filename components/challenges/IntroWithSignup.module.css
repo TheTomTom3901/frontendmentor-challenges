@@ -1,0 +1,11 @@
+.background {
+  background-image: url("../../public/intro-with-signup/bg-intro-mobile.png");
+  background-position-x: center;
+  @apply bg-no-repeat;
+}
+
+@screen xl {
+  .background {
+    background-image: url("../../public/intro-with-signup/bg-intro-desktop.png");
+  }
+}

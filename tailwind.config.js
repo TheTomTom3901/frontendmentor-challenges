@@ -3,7 +3,8 @@ const themes = [
   require('./challenges/stats-preview-card/theme'),
   require('./challenges/four-card-feature-section/theme'),
   require('./challenges/single-price-grid/theme'),
-  require('./challenges/social-proof-section/theme')
+  require('./challenges/social-proof-section/theme'),
+  require('./challenges/intro-with-signup/theme')
 ]
 const mergedTheme = themes.reduce((accTheme, currentTheme) => {
   return Object.entries(currentTheme).reduce((acc, [key, value]) => {

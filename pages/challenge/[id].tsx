@@ -5,6 +5,7 @@ import StatsPreviewCard from '../../components/challenges/StatsPreviewCard'
 import FourCardFeatureSection from '../../components/challenges/FourCardFeatureSection'
 import SinglePriceGrid from '../../components/challenges/SinglePriceGrid'
 import SocialProofSection from '../../components/challenges/SocialProofSection'
+import IntroWithSignup from '../../components/challenges/IntroWithSignup'
 
 type Props = {
   challenge: ChallengeModel
@@ -15,7 +16,8 @@ const componentMap = {
   'stats-preview-card': StatsPreviewCard,
   'four-card-feature-section': FourCardFeatureSection,
   'single-price-grid': SinglePriceGrid,
-  'social-proof-section': SocialProofSection
+  'social-proof-section': SocialProofSection,
+  'intro-with-signup': IntroWithSignup
 }
 
 const Challenge = ({ challenge: { id, title, link, fontUrl } }: Props) => {
